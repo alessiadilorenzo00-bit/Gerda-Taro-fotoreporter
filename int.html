@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Gerda Taro</title>
+        <link rel="shortcut icon" href="Immagini/favicon.ico">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    </head>
+    <body>
+        <header>
+            <div class="topnav">
+                <a href="index.html">Home</a>
+                <a href="ad.html">Archivio digitale</a>
+                <a class="active"  href="int.html">Mappa</a>
+            </div>
+        </header>
+        <main>
+            <h1 class="bordertt" style="color: white;">Luoghi dei conflitti fotografati</h1>
+            <div id="map"></div>
+            </br>
+            <hr style="border: none; height: 3px; background-color: #200000;">
+            </br>
+            <div class="carosello-unico-contenitore">
+                <input type="radio" name="carosello-controllo" id="carosello-radio-1" class="carosello-unico-input" checked>
+                <input type="radio" name="carosello-controllo" id="carosello-radio-2" class="carosello-unico-input">
+                <input type="radio" name="carosello-controllo" id="carosello-radio-3" class="carosello-unico-input">
+                <div class="carosello-unico-traccia">
+                    <div class="carosello-unico-slide">
+                        <img src="Immaginigalleria/2.jpg" class="carosello-unico-img" alt="Immagine 1">
+                    </div>
+                    <div class="carosello-unico-slide">
+                        <img src="Immaginigalleria/4.jpg" class="carosello-unico-img" alt="Immagine 2">
+                    </div>
+                    <div class="carosello-unico-slide">
+                        <img src="Immaginigalleria/6.jpg" class="carosello-unico-img" alt="Immagine 3">
+                    </div>
+                </div>
+                <div class="carosello-unico-nav">
+                    <label for="carosello-radio-1" class="carosello-unico-pallino"></label>
+                    <label for="carosello-radio-2" class="carosello-unico-pallino"></label>
+                    <label for="carosello-radio-3" class="carosello-unico-pallino"></label>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© 2025 - Progetto su Gerda Taro | Digital Humanities</p>
+            <p><a href="mailto:alessia.dilorenzo3@studio.unibo.it">Contattami</a></p>
+            <script src="script.js"></script>
+        </footer>
+    </body>
+</html>

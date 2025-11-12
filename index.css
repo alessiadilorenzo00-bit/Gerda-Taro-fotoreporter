@@ -1,0 +1,493 @@
+body{
+  font-family: Arial, sans-serif;
+}
+
+h1{
+  text-align: center;
+}
+
+/*  Testo su immagine */
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Nasconde lo zoom in eccesso */
+}
+
+/* Modifica regola immagine */
+.image-container img {
+  display: block;
+  width: 75%;
+  margin: auto;
+  height: auto;
+  transition: transform 0.4s ease; /* transizione*/
+}
+
+/* hover */
+.image-container img:hover {
+  transform: scale(1.05); /* Ingrandisce l'immagine del 5% */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: rgba(32, 0, 0, 0.4); 
+  color: #fff; 
+  padding: 10px 30px; 
+  font-size: 50px; 
+  text-align: center;
+}
+
+.overlay-texttopleft {
+  position: absolute;
+  top: 2%; 
+  left: 27.79%; 
+  transform: translate(-50%, -50%); 
+  background-color: rgba(32, 0, 0, 0.4);
+  color: #fff; 
+  padding: 10px 30px; 
+  font-size: 20px; 
+  text-align: center;
+}
+
+
+/* Navigazione TOP */
+/* Background navigazione */
+.topnav {
+  background-color: #33333386;
+  overflow: hidden;
+}
+
+/* Stile dei link nella navigazione*/
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Colore link con cursore sopra */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Colore navigazione attuale */
+.topnav a.active {
+  background-color: rgb(61, 9, 9);
+  color: white;
+}
+
+
+.bordertt {
+/* 1. Il bordo */
+  border: 1px solid #200000;
+  background-color: rgb(61, 9, 9);
+  border-radius: 8px;
+  padding: 20px 25px;
+  max-width: 1200px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+/* Le card */
+.card-container {
+  display: flex;           
+  justify-content: center;
+  gap: 20px;               
+  padding: 20px;
+}
+
+/* Stile base per tutte le card */
+.card {
+  flex: 1;                 
+  max-width: 300px;       
+  padding: 20px;
+  border-radius: 8px;     
+  color: white;          
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+/* Colori specifici per ogni card */
+.cardcolor { 
+  background-color: rgb(61, 9, 9);
+}
+
+/* Stile del bottone bianco */
+.card-button {
+  display: inline-block;      /* Rende il link un blocco cliccabile */
+  padding: 10px 20px;         /* Spazio interno attorno al testo */
+  background-color: white;    /* Sfondo bianco */
+  color: #333;                /* Testo scuro per leggibilità */
+  text-decoration: none;      /* Rimuove la sottolineatura standard dei link */
+  border-radius: 4px;         /* Angoli leggermente arrotondati */
+  font-weight: bold;          /* Testo in grassetto */
+  margin-top: 15px;           /* Spazio sopra il bottone */
+  text-align: center;         /* Centra il testo nel bottone */
+  transition: background-color 0.2s; /* Transizione fluida per l'hover */
+}
+
+.card-button:hover {
+  background-color: #f2f2f2;  /* Grigio chiaro al passaggio del mouse */
+}
+
+/* GALLERIA */
+
+
+
+/* --- Contenitore Griglia --- */
+.griglia-galleria {
+  display: grid;
+  /* Crea colonne automatiche, larghezza minima 300px. Si adatta a ogni schermo. */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px; /* Spazio tra le card */
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f5f5f5; /* Sfondo grigio chiaro */
+}
+
+/* --- Stile della Card --- */
+.foto-card {
+  background: #fff;
+  border-radius: 8px; /* Angoli leggermente arrotondati */
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Ombra leggera */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-direction: column; /* Per allineare il footer sempre in fondo */
+  display: none;
+}
+
+.foto-card:hover {
+  transform: translateY(-5px); /* Effetto sollevamento al passaggio del mouse */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* --- Immagine --- */
+.card-immagine {
+  height: 220px; /* Altezza fissa per uniformità */
+  background-color: #eee; /* Colore di caricamento */
+}
+
+.card-immagine img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Taglia l'immagine per riempire lo spazio senza deformarla */
+  display: block;
+}
+
+/* --- Contenuto Testuale --- */
+.card-contenuto {
+  padding: 20px;
+  flex-grow: 1; /* Occupa tutto lo spazio disponibile spingendo il footer in basso */
+}
+
+.card-titolo {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333;
+  text-transform: uppercase; /* Forza il maiuscolo */
+  letter-spacing: 1px;
+}
+
+.card-categoria {
+  display: block;
+  font-size: 0.85rem;
+  color: #007BFF; /* Colore bluetto per la categoria */
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.card-testo {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+/* --- Piede della Card con i bottoni --- */
+.card-piede {
+  padding: 15px 20px;
+  border-top: 1px solid #eee; /* Linea sottile di separazione */
+  display: flex;
+  justify-content: space-between; /* Spinge i due bottoni agli estremi opposti */
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.card-link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #007BFF; /* Colore link primario */
+  transition: color 0.2s;
+}
+
+.card-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Stile specifico per il bottone Metadati */
+.bottone-meta {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c757d; /* Grigio per azione secondaria */
+  padding: 0;
+  font-family: inherit; /* Eredita il font del sito */
+}
+
+.bottone-meta:hover {
+  color: #333;
+}
+
+
+/* FILTRI */
+/* Contenitore per centrare i bottoni */
+.contenitore-filtri {
+  text-align: center;
+  margin: 30px 0 20px 0;
+}
+
+/* Stile base del bottone */
+.btn-filtro {
+  background-color: #fff;
+  border: 2px solid #eee;
+  border-radius: 25px; /* Bottoni arrotondati */
+  padding: 10px 25px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+/* Effetto al passaggio del mouse */
+.btn-filtro:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+/* Stile del bottone attivo (selezionato) */
+.btn-filtro.attivo {
+  background-color: #007BFF; /* Lo stesso blu usato per i link */
+  color: white;
+  border-color: #007BFF;
+}
+
+.foto-card.mostra {
+  display: flex; /* MOSTRA solo se ha la classe 'mostra' */
+  animation: fadeEffect 0.5s; /* Opzionale: piccola animazione di comparsa */
+}
+
+/*Animazione fluida quando appaiono */
+@keyframes fadeEffect {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+
+/* PAGINA METADATI */ 
+/* --- Stili Pagina Metadati --- */
+.pagina-metadati {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
+
+.btn-indietro {
+  display: inline-block;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.layout-metadati {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.foto-grande {
+  flex: 1 1 60%; /* Occupa il 60% dello spazio disponibile */
+}
+
+.foto-grande img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.dati-tecnici {
+  flex: 1 1 40%; /* Occupa il 40% */
+}
+
+.dati-tecnici h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.dati-tecnici table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  font-size: 0.95rem;
+}
+
+.dati-tecnici th, .dati-tecnici td {
+  padding: 12px 5px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.dati-tecnici th {
+  color: #666;
+  font-weight: 600;
+  width: 45%;
+}
+
+/* Carosello*/
+/* --- VARIABILI --- */
+:root {
+  --carosello-unico-altezza: 400px;
+  --carosello-unico-velocita: 0.5s;
+}
+
+/* --- RESET DI BASE --- */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* --- CONTENITORE PRINCIPALE --- */
+.carosello-unico-contenitore {
+  position: relative;
+  max-width: 800px;    /* Puoi cambiare questa larghezza */
+  width: 100%;
+  height: var(--carosello-unico-altezza);
+  margin: 0 auto;
+  overflow: hidden;    /* FONDAMENTALE: nasconde tutto ciò che esce dal riquadro */
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Nascondiamo i pallini di input tecnici */
+.carosello-unico-input {
+  display: none;
+}
+
+/* --- TRACCIA (Il "treno" che si muove) --- */
+.carosello-unico-traccia {
+  display: flex;
+  height: 100%;
+  width: 300%;      /* 3 diapositive = 300% di larghezza */
+  transition: transform var(--carosello-unico-velocita) ease-in-out;
+}
+
+/* --- SINGOLA DIAPOSITIVA --- */
+.carosello-unico-slide {
+  height: 100%;
+  /* --- CORREZIONE IMPORTANTE --- */
+  /* Ogni slide deve occupare 1/3 della traccia totale (100% / 3) */
+  width: calc(100% / 3);
+}
+
+/* --- IMMAGINE --- */
+.carosello-unico-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ritaglia l'immagine per riempire lo spazio senza deformarla */
+  display: block;
+}
+
+/* --- MOVIMENTO DEL CAROSELLO --- */
+/* Slide 1: Nessuno spostamento */
+#carosello-radio-1:checked ~ .carosello-unico-traccia {
+  transform: translateX(0%);
+}
+
+/* Slide 2: Sposta a sinistra di 1/3 della traccia */
+#carosello-radio-2:checked ~ .carosello-unico-traccia {
+  transform: translateX(calc(-100% / 3));
+}
+
+/* Slide 3: Sposta a sinistra di 2/3 della traccia */
+#carosello-radio-3:checked ~ .carosello-unico-traccia {
+  transform: translateX(calc(-200% / 3));
+}
+
+/* --- STILE DEI PALLINI DI NAVIGAZIONE --- */
+.carosello-unico-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+  background: rgba(0,0,0,0.4);
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+
+.carosello-unico-pallino {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.carosello-unico-pallino:hover {
+  opacity: 0.7;
+}
+
+/* --- Pallino attivo --- */
+#carosello-radio-1:checked ~ .carosello-unico-nav label[for="carosello-radio-1"],
+#carosello-radio-2:checked ~ .carosello-unico-nav label[for="carosello-radio-2"],
+#carosello-radio-3:checked ~ .carosello-unico-nav label[for="carosello-radio-3"] {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/* MAPPA */
+#map { height: 540px; width: 960px; margin: auto; }
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(61, 9, 9);
+  color: white;
+}
+
+iframe{
+  display: block;
+  margin: 0 auto;
+}
+
+
+body {
+  background-image: url('Immagini/mf.jpg');
+  background-repeat: no-repeat;    
+  background-size: cover;          
+  background-position: center;     
+  background-attachment: fixed;    
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Gerda Taro</title>
+        <link rel="shortcut icon" href="Immagini/favicon.ico">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <div class="topnav">
+                <a href="index.html">Home</a>
+                <a class="active" href="ad.html">Archivio digitale</a>
+                <a href="int.html">Mappa</a>
+            </div>
+        </header>
+        <main>
+            <div class="contenitore-filtri">
+                <button class="btn-filtro attivo" onclick="filtraGriglia('tutti')">Mostra Tutti</button>
+                <button class="btn-filtro" onclick="filtraGriglia('tag-foto')">FOTO</button>
+                <button class="btn-filtro" onclick="filtraGriglia('tag-testi')">TESTI</button>
+            </div>
+            <section class="griglia-galleria">
+                <article class="foto-card  tag-foto">
+                    <div class="card-immagine">
+                        <img src="Immaginigalleria/2.jpg" alt="Soldato in puntamento">
+                        </div>
+                    <div class="card-contenuto">
+                        <h3 class="card-titolo">SOLDATO IN PUNTAMENTO</h3>
+                        <span class="card-categoria">FOTO</span>
+                        <p class="card-testo">Soldato coperto dalle rocce in puntamento, pronto a sparare. <br />
+                        <b>Anno: 1936</b> <br />
+                        <b>Luogo: Fronte d'Aragona</b>
+                        </p>
+                    </div>
+                    <div class="card-piede">
+                        <a href="metadati.html" class="card-link bottone-meta">Metadati</a>
+                    </div>
+                </article>
+                <article class="foto-card  tag-foto">
+                    <div class="card-immagine">
+                        <img src="Immaginigalleria/3.jpg" alt="Soldati che corrono">
+                    </div>
+                    <div class="card-contenuto">
+                        <h3 class="card-titolo">SOLDATI CHE CORRONO</h3>
+                        <span class="card-categoria">FOTO</span>
+                        <p class="card-testo">Foto di soldati che stanno correndo <br />
+                        <b>Anno: 1937</b> <br />
+                        <b>Luogo: Cordova</b>
+                        </p>
+                    </div>
+                    <div class="card-piede">
+                        <button class="card-link bottone-meta">Metadati</button>
+                    </div>
+                </article>
+                <article class="foto-card  tag-foto">
+                    <div class="card-immagine">
+                        <img src="Immaginigalleria/4.jpg" alt="Corno">
+                    </div>
+                    <div class="card-contenuto">
+                        <h3 class="card-titolo">CORNO</h3>
+                        <span class="card-categoria">FOTO</span>
+                        <p class="card-testo">Soldato che suona il corno <br />
+                        <b>Anno: 1937</b> <br />
+                        <b>Luogo: Valencia</b>
+                        </p>
+                    </div>
+                    <div class="card-piede">
+                        <button class="card-link bottone-meta">Metadati</button>
+                    </div>
+                </article>
+                <article class="foto-card  tag-foto">
+                    <div class="card-immagine">
+                        <img src="Immaginigalleria/5.jpg" alt="Soldati con granata">
+                    </div>
+                    <div class="card-contenuto">
+                        <h3 class="card-titolo">SOLDATI CON GRANATA</h3>
+                        <span class="card-categoria">FOTO</span>
+                        <p class="card-testo">Due uomini che inseriscono la sicura nella granata. <br />
+                        <b>Anno: 1937</b> <br />
+                        <b>Luogo: Madrid</b>
+                        </p>
+                    </div>
+                    <div class="card-piede">
+                        <button class="card-link bottone-meta">Metadati</button>
+                    </div>
+                </article>
+                <article class="foto-card  tag-foto">
+                    <div class="card-immagine">
+                        <img src="Immaginigalleria/6.jpg" alt="TRASPORTO DI UN COMPAGNO">
+                    </div>
+                    <div class="card-contenuto">
+                        <h3 class="card-titolo">TRASPORTO DI UN COMPAGNO</h3>
+                        <span class="card-categoria">FOTO</span>
+                        <p class="card-testo">Soldati che stanno trasportando il corpo di un compagno <br />
+                        <b>Anno: 1937</b> <br />
+                        <b>Luogo: Segovia</b>
+                        </p>
+                    </div>
+                    <div class="card-piede">
+                        <button class="card-link bottone-meta">Metadati</button>
+                    </div>
+                </article>
+                <article class="foto-card  tag-foto">
+                    <div class="card-immagine">
+                        <img src="Immaginigalleria/7.jpg" alt="CANNONE DA NAVE">
+                    </div>
+                    <div class="card-contenuto">
+                        <h3 class="card-titolo">INTERNO DI UNA NAVE</h3>
+                        <span class="card-categoria">FOTO</span>
+                        <p class="card-testo">Compagni all'interno di una nave da combattimento. <br />
+                        <b>Anno: 1937</b> <br />
+                        <b>Luogo: Spain</b>
+                        </p>
+                    </div>
+                    <div class="card-piede">
+                        <button class="card-link bottone-meta">Metadati</button>
+                    </div>
+                </article>
+                <article class="foto-card  tag-foto">
+                    <div class="card-immagine">
+                    <img src="Immaginigalleria/8.jpg" alt="NAVE">
+                    </div>
+                    <div class="card-contenuto">
+                        <h3 class="card-titolo">NAVE</h3>
+                        <span class="card-categoria">FOTO</span>
+                        <p class="card-testo">Nave bellica pronta al combattimento. <br />
+                        <b>Anno: 1937</b> <br />
+                        <b>Luogo: Spain</b>
+                        </p>
+                    </div>
+                    <div class="card-piede">
+                        <button class="card-link bottone-meta">Metadati</button>
+                    </div>
+                </article>
+                <article class="foto-card tag-testi">
+                    <div class="card-immagine tag-testi">
+                        <img src="Immaginigalleria/9.png" alt="MADRID">
+                    </div>
+                    <div class="card-contenuto">
+                        <h3 class="card-titolo">GERDA TARO</h3>
+                        <span class="card-categoria">TESTI</span>
+                        <p class="card-testo">Copertina di "Out of the Shadows a life of Gerda Taro" <br />
+                        <b>Anno: 2008</b> <br />
+                        <b>Luogo di pubblicazione: Londra</b> <br />
+                        </p>
+                    </div>
+                    <div class="card-piede">
+                        <a href="metadati2.html" class="card-link bottone-meta">Metadati</a>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <p>© 2025 - Progetto su Gerda Taro | Digital Humanities</p>
+            <p><a href="mailto:alessia.dilorenzo3@studio.unibo.it">Contattami</a></p>
+            <script src="script.js"></script>
+        </footer>
+    </body>
+</html>
